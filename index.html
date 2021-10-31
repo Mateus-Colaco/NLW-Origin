@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+
+    
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <!-- Icones -->
     <link rel="stylesheet" href="Assets\fonts\StyleIcons.css" />
+
     <title>OriginSix</title>
   </head>
 
@@ -139,59 +146,81 @@
       </section>
       <div class="divider-1"></div>
       <section class="section" id="testimonials">
-        <div class="containter grid">
+        <div class="containter">
           <header>
-            <h2>Depoimentos de quem já passou por aqui</h2>
+            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
           </header>
-          <div class="testimonials">
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Reprehenderit earum nemo, quo laboriosam
-                  quos aliquam.
-                </p>
-                <cite
-                  ><img
-                    src="Assets\images\User3.jpg"
-                    alt="User3 Photo"
-                  />Someone</cite
-                >
-              </blockquote>
-            </div>
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Reprehenderit earum nemo, quo laboriosam
-                  quos aliquam.
-                </p>
-                <cite
-                  ><img
-                    src="Assets\images\User2.jpg"
-                    alt="User2 Photo"
-                  />Anyone</cite
-                >
-              </blockquote>
-            </div>
-            <div class="testimonial">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span> Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Reprehenderit earum nemo, quo laboriosam
-                  quos aliquam.
-                </p>
-                <cite
-                  ><img src="Assets\images\User1.jpg" alt="User1 Photo" />No
-                  one</cite
-                >
-              </blockquote>
+          <div class="testimonials swiper">
+              
+              <div class="swiper-wrapper">
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p><span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt</p>
+                    <cite>
+                      <img src="Assets\images\User3.jpg" alt="User3 Photo"/>                 Someone</cite>
+                  </blockquote>
+                </div>
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p><span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et incidunt</p>
+                    <cite
+                      ><img src="Assets\images\User2.jpg" alt="User2 Photo" />
+                      Anyone</cite
+                    >
+                  </blockquote>
+                </div>
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p><span>&ldquo;</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum blanditiis saepe nam excepturi explicabo ipsa error ipsam neque</p>
+                    <cite
+                      ><img src="Assets\images\User1.jpg" alt="User1 Photo" />
+                      No one</cite
+                    >
+                  </blockquote>
+                </div>
+              </div>
+              <div class="swiper-pagination"></span>
             </div>
           </div>
         </div>
+  
+      </section>
+      <div class="divider-2"></div>
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+          <header>
+            <h2 class="title">Entre em contato com a gente!</h2>
+          </header>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
+            impedit, magni perspiciatis ad quae delectus voluptatem minima
+            qui officiis corrupti aliquid, perferendis repellat doloremque
+            rem labore sapiente ipsa.
+          </p>
+        </div>
+
+        <a class="button-2" href="https://api.whatsapp.com/send?phone=+5512991234567&text=Hello!" target="_blank"><i class="icon-whatsapp"></i>Entrar em contato</a>
+        </div>
+
+        <div class="links">
+          <ul class="grid">
+            <li><i class="icon-phone infos"style="font-size: 1.5rem"></i><span class="text">(12) 9 9123-4567</span></li>
+            <li><i class="icon-map-pin infos"style="font-size: 1.5rem"></i><span class="text">R. 15 de Novembro</span></li>
+            <li><i class="icon-mail infos"style="font-size: 1.5rem"></i><span class="text">dev1@DevSolutions.com</span></li>
+          </ul>
+        </div>
+          </div>
+        
       </section>
     </main>
-
+    <!--SWIPER-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <!-- SCROLL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- MAIN -->
     <script src="main.js"></script>
   </body>
 </html>
+

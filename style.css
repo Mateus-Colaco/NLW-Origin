@@ -30,12 +30,12 @@ img {
 :root {
   --header-height: 4.5rem;
   background-color: #222222;
-  --hue: 349;
-  --base-color: hsl(var(--hue), 100%, 35%);
-  --base-color-second: hsl(var(--hue), 52%, 61%);
-  --base-color-dark: hsl(var(--hue), 100%, 15%);
-  --base-color-light: hsl(var(--hue), 100%, 80%);
-  --base-color-alt: hsl(var(--hue) 100% 58%);
+  --hue: 278;
+  --base-color: hsl(var(--hue), 83%, 40%);
+  --base-color-second: hsl(var(--hue), 87%, 36%);
+  --base-color-dark: hsl(var(--hue), 83%, 12%);
+  --base-color-light: hsl(var(--hue), 87%, 72%);
+  --base-color-alt: hsl(var(--hue) 48% 60%);
   --body-color: hsl(0 0% 98%);
   --text-color: hsl(0 0% 46%);
   --text-color-alt: hsl(0 0% 70%);
@@ -134,7 +134,7 @@ h3 {
 }
 
 #header.scroll {
-  box-shadow: 0 0 0.75rem 0rem hsla(349, 100%, 58%, 0.3);
+  box-shadow: 0 0 0.75rem 0rem var(--base-color-dark);
 }
 
 .title {
@@ -314,7 +314,7 @@ main {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 4rem;
-  color: hsl(0 0% 100%);
+  color: hsl(0 100% 100%);
 }
 
 .card .title {
@@ -328,35 +328,122 @@ main {
 /*-----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
 
-#testimonials {
-  overflow: hidden;
+.swiper-slide{
+  height: auto;
+  padding: 4rem 1rem;
 }
 
-#testimonials .container {
-  margin: 0;
+.swiper-pagination-bullet-active{
+  background:var(--base-color-light);
 }
 
-#testimonials .image {
-  align-items: center;
+.testimonials {
+  padding: 0rem;
 }
 
-#testimonials.image img {
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0 0 8px 0px #9815e4;
+  border-radius: 0.3rem;
+}
+
+#testimonials blockquote p {
   position: relative;
-  width: 100%;
+  text-indent: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-#testimonials .text {
+#testimonials blockquote p span {
+  font: 700 2.6rem georgia;
+  position: absolute;
+  top: -0.6rem;
+  left: -1.87rem;
+  color: var(--base-color-light);
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  clip-path: circle();
+  margin-right: 0.5rem;
+}
+
+
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*                                          CONTACT                                              */
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+#contact header{
+  margin-bottom: 1rem;
+}
+
+#contact .container{
+  margin:0;
+}
+
+
+#contact .title{
+  margin-right: 3.875rem;
+}
+
+#contact.section{
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
-#testimonials .text h1 {
-  margin-bottom: 1rem;
+.button-2 {
+  color: var(--text-color-light);
+  display: inline-flex;
+  font: 500 1rem 'DM Sans', sans-serif;
+  align-items: center;
+  background-color: var(--base-color);
+  border-radius: 0.25rem;
+  height: 3.5rem;
+  width: 14.75rem;
+  padding: 0 2rem;
+  transition: background 0.45s;
+  display: flex;
 }
 
-#testimonials .text p {
-  margin-bottom: 0.5rem;
-  max-width: 90%;
+.button-2:hover { 
+  background-color: var(--base-color-dark);
+}
+
+#contact div.container.grid{
+margin-bottom: 4rem;
+}
+
+#contact ul.grid{
+  gap:2rem;
+}
+
+#contact ul li i,#contact .button-2 i{
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul li{
+  display: flex;
+  align-items: center;
+}
+.infos{
+  color: var(--base-color-light);
+  margin-right: 0.75rem;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -461,6 +548,8 @@ nav.show i.icon-close:hover {
   color: var(--text-color-light);
   font-size: 2rem;
   right: 1.4rem;
+  top:1.4rem;
+
 }
 
 nav i.icon-menu:hover {
