@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?eur3bo');
-  src:  url('fonts/icomoon.eot?eur3bo#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?eur3bo') format('truetype'),
-    url('fonts/icomoon.woff?eur3bo') format('woff'),
-    url('fonts/icomoon.svg?eur3bo#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xbhphd');
+  src:  url('fonts/icomoon.eot?xbhphd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xbhphd') format('truetype'),
+    url('fonts/icomoon.woff?xbhphd') format('woff'),
+    url('fonts/icomoon.svg?xbhphd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -58,6 +58,12 @@
 .icon-program:before {
   content: "\e904";
 }
+.icon-chevron-up1:before {
+  content: "\e910";
+}
+.icon-youtube:before {
+  content: "\e90e";
+}
 .icon-menu:before {
   content: "\e905";
 }
@@ -99,4 +105,14 @@
 }
 .icon-pc:before {
   content: "\e90d";
+}
+.icon-react:before {
+  content: "\e90f";
+  color: #61dafb;
+}
+.icon-chevron-up:before {
+  content: "\e911";
+}
+.icon-cheveron-outline-up:before {
+  content: "\e912";
 }

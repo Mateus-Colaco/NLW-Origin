@@ -14,16 +14,15 @@ for (const link of links) {
   })
 }
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-window.addEventListener('scroll', function () {
+function shadowHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
 
 const swiper = new Swiper('.swiper', {
   loop: true,
@@ -52,7 +51,23 @@ scrollReveal.reveal(
   #testimonials header,
   #testimonials .testimonials,
   #contact .text,
-  #contact .links
+  #contact .links,
+  footer .items
   `,
   { interval: 85 }
 )
+
+/* button-back-to-top */
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+  if (window.scrollY >= 375) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+window.addEventListener('scroll', function () {
+  backToTop()
+  shadowHeaderWhenScroll()
+})

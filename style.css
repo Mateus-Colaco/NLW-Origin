@@ -29,18 +29,29 @@ img {
 
 :root {
   --header-height: 4.5rem;
+
+  /* COLORS */
   background-color: #222222;
   --hue: 278;
   --base-color: hsl(var(--hue), 83%, 40%);
   --base-color-second: hsl(var(--hue), 87%, 36%);
-  --base-color-dark: hsl(var(--hue), 83%, 12%);
+  --base-color-dark: hsl(var(--hue), 83%, 14%);
   --base-color-light: hsl(var(--hue), 87%, 72%);
   --base-color-alt: hsl(var(--hue) 48% 60%);
-  --body-color: hsl(0 0% 98%);
   --text-color: hsl(0 0% 46%);
   --text-color-alt: hsl(0 0% 70%);
+  --text-color-2: hsl(0 0% 25%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* FONTS */
+  --body-font-size: 1rem;
+  --h3-font-size: 1.5rem;
+  --menu-hover-size: 1.54rem;
+  --icon-font-size-sec: 1.75rem;
+  --title-font-size:1.875rem;
+  --icon-font-size: 2rem;
+  --testimonial-quote-size: 2.6rem;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -54,26 +65,26 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 var(--body-font-size) 'DM Sans', sans-serif;
   background: var(--body-color);
   color: var(--text-color-light);
   -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) 'Poppins', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
 
 h2 {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) 'Poppins', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
 
 h3 {
-  font: 700 1.5rem 'Poppins', sans-serif;
+  font: 700 var(--h3-font-size) 'Poppins', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -168,7 +179,7 @@ h3 {
 }
 
 .section header strong {
-  color: var(--base-color);
+  color: var(--base-color-light);
 }
 
 nav {
@@ -185,6 +196,14 @@ nav {
 }
 
 .logo span {
+  color: var(--base-color);
+}
+
+.logo-alt {
+  color: var(--text-color-alt);
+}
+
+.logo-alt span {
   color: var(--base-color);
 }
 
@@ -318,7 +337,7 @@ main {
 }
 
 .card .title {
-  font-size: 1.5rem;
+  font-size: var(--h3-font-size);
   margin-bottom: 0.75rem;
 }
 
@@ -328,13 +347,13 @@ main {
 /*-----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
 
-.swiper-slide{
+.swiper-slide {
   height: auto;
   padding: 4rem 1rem;
 }
 
-.swiper-pagination-bullet-active{
-  background:var(--base-color-light);
+.swiper-pagination-bullet-active {
+  background: var(--base-color-light);
 }
 
 .testimonials {
@@ -354,7 +373,7 @@ main {
 }
 
 #testimonials blockquote p span {
-  font: 700 2.6rem georgia;
+  font: 700 var(--testimonial-quote-size) georgia;
   position: absolute;
   top: -0.6rem;
   left: -1.87rem;
@@ -375,7 +394,6 @@ main {
   margin-right: 0.5rem;
 }
 
-
 #testimonials header {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -388,20 +406,19 @@ main {
 /*-----------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
 
-#contact header{
+#contact header {
   margin-bottom: 1rem;
 }
 
-#contact .container{
-  margin:0;
+#contact .container {
+  margin: 0;
 }
 
-
-#contact .title{
+#contact .title {
   margin-right: 3.875rem;
 }
 
-#contact.section{
+#contact.section {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -420,28 +437,30 @@ main {
   display: flex;
 }
 
-.button-2:hover { 
+.button-2:hover {
   background-color: var(--base-color-dark);
 }
 
-#contact div.container.grid{
-margin-bottom: 4rem;
+#contact div.container.grid {
+  margin-bottom: 4rem;
 }
 
-#contact ul.grid{
-  gap:2rem;
+#contact ul.grid {
+  gap: 2rem;
 }
 
-#contact ul li i,#contact .button-2 i{
-  font-size: 1.5rem;
+#contact ul li i,
+#contact .button-2 i {
+  font-size: var(--h3-font-size);
   margin-right: 0.625rem;
 }
 
-#contact ul li{
+#contact ul li {
   display: flex;
   align-items: center;
 }
-.infos{
+
+.infos {
   color: var(--base-color-light);
   margin-right: 0.75rem;
 }
@@ -520,7 +539,7 @@ nav ul li a:hover::after {
 /*-----------------------------------------------------------------------------------------------*/
 
 .toggle {
-  font-size: 1.5rem;
+  font-size: var(--h3-font-size);
   right: 1.5rem;
   color: var(--text-color-alt);
   cursor: pointer;
@@ -539,20 +558,125 @@ nav.show i.icon-close {
   visibility: visible;
   position: absolute;
   transition: 0s;
-  font-size: 1.75rem;
+  font-size: var(--title-font-size);
   top: 1.5rem;
   transition: color 0.4s;
 }
 
 nav.show i.icon-close:hover {
   color: var(--text-color-light);
-  font-size: 2rem;
+  font-size: var(--icon-font-size);
   right: 1.4rem;
-  top:1.4rem;
-
+  top: 1.4rem;
 }
 
 nav i.icon-menu:hover {
   color: var(--text-color-light);
-  font-size: 1.54rem;
+  font-size: var(--menu-hover-size);
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*                                            FOOTER                                             */
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+footer {
+  background-color: #121212;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: var(--icon-font-size-sec);
+  color: var(--text-color-light);
+}
+
+footer .social a {
+  margin-right: 2.5rem;
+  transition: 0.3s;
+  display:inline-block;
+}
+
+footer .social a:hover {
+  transform:translateY(-0.5rem);
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+/*                                            BUTTON                                             */
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+.back-to-top {
+  background-color: hsla(10,0%,100%,0.5);
+  color: var(--base-color-second);
+  
+  padding: 0.5rem;
+  border-radius: 3rem;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+
+  font-size: 1.5rem;
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%); 
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================== MEDIA QUERIES ============================= */
+/* medium devices: 767 < */ 
+@media(min-width:767px) {
+  :root{
+    --body-font-size: 1.125rem;
+    --h3-font-size: 1.6875rem;
+    --menu-hover-size: 1.7325rem;
+    --icon-font-size-sec: 1.96875rem;
+    --title-font-size: 2.109375rem;
+    --icon-font-size: 2.25rem;
+    --testimonial-quote-size: 2.925rem;
+  }
+  
+}
+
+
+/* large devices: 992 < */
+@media(min-width:992px) {
+  :root{
+    --body-font-size: 1.2rem;
+    --h3-font-size: 1.8rem;
+    --menu-hover-size: 1.848rem;
+    --icon-font-size-sec: 2.1rem;
+    --title-font-size: 2.2rem;
+    --icon-font-size: 2.4rem;
+    --testimonial-quote-size: 3.12rem;
+  }
+}
+
+/* large devices: 1023 < */
+@media(min-width:1023px) {
+  
+}
+/* extra large devices: 1200 < */
+@media(min-width:1200px) {
+  
 }
